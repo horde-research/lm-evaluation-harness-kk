@@ -1,0 +1,11 @@
+task: kk_world_history_unt_mc
+dataset_path: kz-transformers/kazakh-unified-national-testing-mc
+output_type: multiple_choice
+training_split: world_history
+process_docs: !function utils.process_docs
+validation_split: world_history
+doc_to_text: "{{question}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nE. {{choices[4]}}\nF. {{choices[5]}}\nG. {{choices[6]}}\nH. {{choices[7]}}\nI. {{choices[8]}}\nJ. {{choices[9]}}\nK. {{choices[10]}}\nL. {{choices[11]}}\nЖауап:"
+doc_to_target: label
+doc_to_choice: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]
+metric_list:
+  - metric: acc
