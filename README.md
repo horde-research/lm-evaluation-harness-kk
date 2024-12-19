@@ -56,6 +56,8 @@ To install the `lm-eval` package from the github repository, run:
 ```bash
 git clone --depth 1 https://github.com/horde-research/lm-evaluation-harness-kk.git
 cd lm-evaluation-harness-kk
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e .
 ```
 
